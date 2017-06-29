@@ -3,48 +3,53 @@
      <head>
           <meta charset="utf-8">
           <title>Calculator</title>
+          <script src="calculator.js" charset="utf-8" lang="JavaScript"></script>
      </head>
      <body>
-          <form>
+          <div>
+          <!--Calculator  -->
                <table>
                     <caption>Calculator</caption>
-
                     <tr><!--  firt row -->
-                         <td colspan="5">
-                              <input type="textarea" name="output" value="0.0">
+                         <td colspan="6">
+                              <div id="output">
+
+                              </div>
+                              <!-- <p id = "output"></p> -->
                          </td>
                     </tr>
                     <tr><!--  second row -->
-                         <td><input type="button" name="7" value="7"></td>
-                         <td><input type="button" name="8" value="8"></td>
-                         <td><input type="button" name="9" value="9"></td>
-                         <td><input type="button" name="addition" value="+"></td>
-                         <td><input type="button" name="subtraction" value="-"></td>
+                         <td><input type="button" name="7" value="7" onclick="input(7)"></td>
+                         <td><input type="button" name="8" value="8" onclick="input(8)"></td>
+                         <td><input type="button" name="9" value="9" onclick="input(9)"></td>
+                         <td><input type="button" name="addition" value="+" onclick="input('+')"></td>
+                         <td> <input type="button" name="subtraction" value="-" onclick="input('-')"></td>
+                         <td rowspan="2"><input type="button" name="evaluate" value="=" onclick= "getAnswer()"></td>
                     </tr>
-
                     <tr><!--  third row -->
-                         <td><input type="button" name="4" value="4"></td>
-                         <td><input type="button" name="5" value="5"></td>
-                         <td><input type="button" name="6" value="6"></td>
-                         <td><input type="button" name="multiplication" value="*"></td>
-                         <td><input type="button" name="division" value="/"></td>
+                         <td><input type="button" name="4" value="4" onclick="input(4)"></td>
+                         <td><input type="button" name="5" value="5" onclick="input(5)"></td>
+                         <td><input type="button" name="6" value="6" onclick="input(6)"></td>
+                         <td><input type="button" name="multiplication" value="*" onclick="input('*')"></td>
+                         <td><input type="button" name="division" value="/" onclick="input('/')"></td>
                     </tr>
 
                <tr><!--  fourth row -->
-                    <td><input type="button" name="1" value="1"></td>
-                    <td><input type="button" name="2" value="2"></td>
-                    <td><input type="button" name="3" value="3"></td>
-                    <td><input type="button" name="exponentiation" value="^"></td>
-                    <td><input type="button" name="modulo" value="%"></td>
+                    <td><input type="button" name="1" value="1" onclick="input(1)"></td>
+                    <td><input type="button" name="2" value="2" onclick="input(2)"></td>
+                    <td><input type="button" name="3" value="3" onclick="input(3)"></td>
+                    <td><input type="button" name="exponentiation" value="^" onclick="input('**')"></td>
+                    <td><input type="button" name="modulo" value="%" onclick="input('%')"></td>
+                    <td rowspan="2"><input type="button" name="clear" value="CLR" onclick="clr()"></td>
                </tr>
                <tr><!--  fourth row -->
-                    <td><input type="button" name="0" value="0"></td>
-                    <td><input type="button" name="decimal point" value="."></td>
-                    <td><input type="button" name="clear" value="CLR"></td>
-                    <td><input type="button" name="delete" value="DEL"></td>
-                    <td><input type="button" name="evaluation" value="="></td>
+                    <td><input type="button" name="0" value="0" onclick="input('0')"></td>
+                    <td><input type="button" name="decimal point" value="." onclick="input('.')"></td>
+                    <td><input type="button" name="open parenthesis" value="(" onclick="input('(')"></td>
+                    <td><input type="button" name="close parenthesis" value=")" onclick="input(')')"></td>
+                    <td><input type="button" name="delete" value="DEL" onclick="del()"></td>
                </tr>
                </table>
-          </form>
+          </div>
      </body>
 </html>
